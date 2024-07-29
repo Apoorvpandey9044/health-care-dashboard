@@ -1,0 +1,158 @@
+.patient-details {
+    width: 75%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-left: 20px;
+  }
+  
+  .patient-details h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .card {
+    background-color: #f4f6f8;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .card p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .chart-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  
+  .chart-container h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .chart-placeholder {
+    height: 300px; /* Placeholder height, adjust as needed */
+  }
+  
+  .diagnostic-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .diagnostic-list li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+  }
+
+  .respiratory-rate, .temperature, .heart-rate {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .respiratory-rate {
+    background-color: #e6f7ff;
+  }
+  
+  .temperature {
+    background-color: #ffe6e6;
+  }
+  
+  .heart-rate {
+    background-color: #ffe6f7;
+  }
+
+  .patient-details img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .patient-details p {
+    margin: 5px 0;
+  }
+  
+  .info-button {
+    background-color: #00d1b2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .info-button:hover {
+    background-color: #00b89c;
+  }
+  
+  .metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .card.diagnostic-list ul,
+  .card.lab-results ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .card.diagnostic-list li,
+  .card.lab-results li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .card.lab-results li:last-child {
+    border-bottom: none;
+  }
+  
+  .card.lab-results a {
+    text-decoration: none;
+    color: #00d1b2;
+  }
+  
+  .card.lab-results .download-icon:before {
+    content: '\f019'; /* FontAwesome download icon code */
+    font-family: 'FontAwesome';
+    margin-left: 10px;
+  }
+
+  .below-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .mid-container {
+    display: flex;
+    flex-direction: row;
+  }
+  

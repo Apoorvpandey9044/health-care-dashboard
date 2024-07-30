@@ -1,12 +1,23 @@
 .patient-list {
-    width: 25%;
+    width: 20%;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow-y: scroll;
   }
+
+  .list-names {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
   
+  .list-names:hover {
+    background-color: #e6f7ff;
+  }
+
   .patient-list h2 {
     font-size: 24px;
     margin-bottom: 20px;
@@ -18,6 +29,12 @@
     padding: 0;
     margin: 0;
   }
+
+  .list-names.selected {
+    background-color: #e6f7ff; /* Change to the color you want for the highlight */
+    width: 100%;
+  }
+  
   
   .patient-list li {
     display: flex;
@@ -27,10 +44,6 @@
     margin-bottom: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .patient-list li:hover {
-    background-color: #e6f7ff;
   }
   
   .patient-list img {

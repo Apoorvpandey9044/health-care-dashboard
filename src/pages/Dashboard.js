@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const Dashboard = () => {
   const [patientList, setPatientList] = useState([]);
-  const [selectedPatientIndex, setSelectedPatientIndex] = useState(0);
+  const [selectedPatientIndex, setSelectedPatientIndex] = useState(3);
   const [loading, setLoading] = useState(true);
 
   let config = {

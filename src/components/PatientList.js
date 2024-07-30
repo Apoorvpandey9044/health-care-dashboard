@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/PatientList.css';
 
 const PatientList = ({ patients, onPatientClick }) => {
-    console.log(patients)
-  return (
+  const [selectedPatientIndex, setSelectedPatientIndex] = useState(null);
 
+  const handlePatientClick = (index) => {
+    setSelectedPatientIndex(index);
+    onPatientClick(index);
+  };
+
+  return (
     <div className="patient-list">
       <h2>Patients</h2>
       <ul>
         {patients.map((patient, index) => (
-          <li key={patient.id} onClick={() => onPatientClick(index)}>
-            <img src={patient.profile_picture} alt="Patient" />
-            <span>{patient.name}</span>
-          </li>
+          <div key={patient.id} className={`list-names ${selectedPatientIndex === index ? 'selected' : ''}`}>
+            <li onClick={() => handlePatientClick(index)}>
+              <img src={patient.profile_picture} alt="Patient" />
+              <span>{patient.name}</span>
+            </li>
+            <i className="bi bi-three-dots"></i>
+          </div>
         ))}
       </ul>
     </div>

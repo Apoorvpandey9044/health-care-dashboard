@@ -1,0 +1,73 @@
+.custom-navbar {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    width: 80%;
+    margin: auto;
+    margin-top: 8px;
+    height: 20% !important;
+  }
+
+  
+  .custom-navbar .navbar-brand {
+    font-weight: bold;
+    font-size: 24px;
+    color: #000;
+  }
+  
+  .custom-navbar .company-logo {
+    margin-right: 10px;
+  }
+  
+  .custom-navbar .nav-item {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    padding: 10px 15px;
+    border-radius: 10px;
+    position: relative;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  .custom-navbar .nav-item.active {
+    background-color: #ecf3f2;
+    color: #131313 !important;
+  }
+  
+  .custom-navbar .nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #00d1b2;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .custom-navbar .nav-item:hover {
+    color: #00d1b2;
+  }
+  
+  .custom-navbar .profile-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .custom-navbar .profile-role {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .custom-navbar .bi-gear {
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .custom-navbar .bi-gear:hover {
+    color: #00d1b2;
+  }
+  

@@ -1,34 +1,40 @@
 import React from 'react';
 import '../styles/PatientDetails.css';
 import BloodPressureChart from './BloodPressureChart';
+import RespiratoryImage from '../images/respiratory rate.svg';
+import TemperatureImage from '../images/temperature.svg';
+import HeartRateImage from '../images/HeartBPM.svg';
 
 const PatientDetails = ({ selectedPatient }) => {
     console.log(selectedPatient)
   return (
     <div className="patient-details">
-      <div className="mid-container">
-      <div className="chart-container">
-      <h3>Diagnosis History</h3>
+      <div className="mid-container" >
+      <div className="chart-container" style={{width: '40vw', height: '30vh'}}>
+
         <BloodPressureChart data={selectedPatient.diagnosis_history} />
         <div className="metrics">
             <div className="respiratory-rate">
-            <p>Respiratory Rate</p>
-            <p>{selectedPatient.diagnosis_history[0].respiratory_rate.value} bpm</p>
-            <p>Normal</p>
+            <img src={RespiratoryImage} alt='image'/>
+            <p style={{fontSize: '10px', marginTop: '-10px', marginLeft: '10px'}}>Respiratory Rate</p>
+            <p style={{fontWeight: 'bold', marginTop: '-8px', marginLeft: '10px'}}>{selectedPatient.diagnosis_history[0].respiratory_rate.value} bpm</p>
+            <p style={{fontSize: '10px', marginTop: '-6px', marginLeft: '10px'}}>Normal</p>
           </div>
-          <div className="temperature">
-            <p>Temperature</p>
-            <p>{selectedPatient.diagnosis_history[0].temperature.value}°F</p>
-            <p>Normal</p>
+          <div className="temperature" style={{marginLeft: '13px'}}>
+          <img src={TemperatureImage} alt='image'/>
+            <p style={{fontSize: '10px', marginTop: '-10px', marginLeft: '10px'}}>Temperature</p>
+            <p style={{fontWeight: 'bold', marginTop: '-8px', marginLeft: '10px'}}>{selectedPatient.diagnosis_history[0].temperature.value}°F</p>
+            <p style={{fontSize: '10px', marginTop: '-6px', marginLeft: '10px'}}>Normal</p>
           </div>
-          <div className="heart-rate">
-            <p>Heart Rate</p>
-            <p>{selectedPatient.diagnosis_history[0].heart_rate.value} bpm</p>
-            <p>Lower than Average</p>
+          <div className="heart-rate" style={{marginLeft: '13px'}}>
+          <img src={HeartRateImage} alt='image'/>
+            <p style={{fontSize: '10px', marginTop: '-10px', marginLeft: '10px'}}>Heart Rate</p>
+            <p style={{fontWeight: 'bold', marginTop: '-8px', marginLeft: '10px'}}>{selectedPatient.diagnosis_history[0].heart_rate.value} bpm</p>
+            <p style={{fontSize: '10px', marginTop: '-6px', marginLeft: '10px'}}>Lower than Average</p>
           </div>
         </div>
       </div>
-      <div className="card">
+      <div className="card"style={{marginLeft: '20px'}}>
       <h2>{selectedPatient.name}</h2>
         <img src={selectedPatient.profile_picture} alt="image"/>
         <p>Date of Birth: {selectedPatient.date_of_birth}</p>

@@ -47,7 +47,7 @@
   }
   
   .chart-placeholder {
-    height: 300px; /* Placeholder height, adjust as needed */
+    height: 100px; /* Placeholder height, adjust as needed */
   }
   
   .diagnostic-list ul {
@@ -64,12 +64,16 @@
 
   .respiratory-rate, .temperature, .heart-rate {
     display: inline-block;
-    width: 30%;
-    text-align: center;
+    width: 25%;
+    text-align: left;
     padding: 20px;
     border-radius: 10px;
+    height: 20%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 18px;
+    margin-left: -15px;
   }
+
   
   .respiratory-rate {
     background-color: #e6f7ff;
@@ -111,7 +115,7 @@
   
   .metrics {
     display: flex;
-    justify-content: space-between;
+    align-content: left;
     margin-top: 20px;
   }
   
@@ -146,13 +150,19 @@
     margin-left: 10px;
   }
 
+  .card {
+    border: none;
+  }
+
   .below-container {
     display: flex;
     flex-direction: row;
+    padding: 5px 32px 0 32px;
   }
   
   .mid-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
   }
   
